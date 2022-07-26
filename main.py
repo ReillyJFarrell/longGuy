@@ -23,15 +23,15 @@ if __name__ == '__main__':
                            , default_enabled_guilds=(355444520378302464, 318564596321615892)
                            )
     print("Starting Scrape")
-    items = getItems()
+    # items = getItems()
     print("Finished Scrape")
     @bot.command
     @lightbulb.command('fg-store', 'Gives current Fall Guys Shop Items')
     @lightbulb.implements(lightbulb.SlashCommand)
     async def fgstore(ctx):
-        # await ctx.respond('Current Items:')
-        for ii in items:
-           await ctx.respond(ii)
+        await ctx.respond('Current Items:')
+        # for ii in items:
+        #    await ctx.respond(ii)
 
     bot.run()
 
