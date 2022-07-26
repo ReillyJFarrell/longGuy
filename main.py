@@ -1,4 +1,3 @@
-# Long Guy discord bot script
 import hikari
 import requests
 from bs4 import BeautifulSoup
