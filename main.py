@@ -25,6 +25,7 @@ def getItems():
         # print(item)
         # items.append(item['src'])
     vals = r.text.split(" ")
+    print(vals)
     results = []
     for ii in range(len(vals)):
         if 'alignnone' in vals[ii]:
@@ -47,8 +48,10 @@ if __name__ == '__main__':
     @lightbulb.command('fg-store', 'Gives current Fall Guys Shop Items')
     @lightbulb.implements(lightbulb.SlashCommand)
     async def ping(ctx):
+        print("Running Command")
         await ctx.respond('Current Items:')
         for ii in getItems():
+            print(ii)
             await ctx.respond(ii)
 
     bot.run()
