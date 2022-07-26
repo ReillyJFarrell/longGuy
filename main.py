@@ -8,7 +8,7 @@ import lightbulb
 def getItems():
     r = requests.get("https://fallguysstore.com")
 
-    soup = BeautifulSoup(r.content)
+    soup = BeautifulSoup(r.content, 'html.parser')
     items = []
     for item in soup.find_all(class_='alignnone'):
         items.append(item['src'])
