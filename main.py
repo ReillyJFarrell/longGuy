@@ -27,7 +27,7 @@ def getItems():
     vals = r.text.split(" ")
     # print(vals)
     results = []
-    print(len(vals))
+    print(len(r.text))
     for ii in range(len(vals)):
         # print("loop")
         if 'alignnone' in vals[ii]:
