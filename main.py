@@ -28,9 +28,11 @@ def getItems():
     # print(vals)
     results = []
     for ii in range(len(vals)):
+        print("loop")
         if 'alignnone' in vals[ii]:
             results.append(vals[ii + 3][5:-1])
 
+    print("Done")
     print(results)
     return results
 
