@@ -1,5 +1,5 @@
 requests
-BeautifulSoup
+beautifulsoup4
 hikari
 git+https://github.com/tandemdude/hikari-lightbulb.git
 
