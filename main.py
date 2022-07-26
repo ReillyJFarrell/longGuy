@@ -25,13 +25,13 @@ def getItems():
         # print(item)
         # items.append(item['src'])
     vals = r.text.split(" ")
-    print(vals)
+    # print(vals)
     results = []
     for ii in range(len(vals)):
         if 'alignnone' in vals[ii]:
             results.append(vals[ii + 3][5:-1])
 
-    # print(results)
+    print(results)
     return results
 
 
