@@ -16,15 +16,15 @@ def getItems():
     return items
 
 
-r = requests.get("https://fallguysstore.com")
-
 
 if __name__ == '__main__':
 
     bot = lightbulb.BotApp(token='MTAwMTI0MTE3MTY4MDU2NzQ0OA.GFurCp.jbufJUvJDP3BHkZ6fHp_dYV6dPZ3SdZn3lw5JY'
                            , default_enabled_guilds=(355444520378302464, 318564596321615892)
                            )
+    print("Starting Scrape")
     items = getItems()
+    print("Finished Scrape")
     @bot.command
     @lightbulb.command('fg-store', 'Gives current Fall Guys Shop Items')
     @lightbulb.implements(lightbulb.SlashCommand)
