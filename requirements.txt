@@ -1,5 +1,5 @@
 requests
-bs4
+git+https://github.com/wention/BeautifulSoup4.git
 hikari
 git+https://github.com/tandemdude/hikari-lightbulb.git
 
