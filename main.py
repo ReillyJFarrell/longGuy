@@ -29,7 +29,7 @@ if __name__ == '__main__':
     @lightbulb.command('fg-store', 'Gives current Fall Guys Shop Items')
     @lightbulb.implements(lightbulb.SlashCommand)
     async def fgstore(ctx):
-        await ctx.respond('Current Items:')
+        await ctx.respond('https://fallguysstore.com/wp-content/uploads/2022/07/furry-friends-duo-300x300.webp')
         # for ii in items:
         #    await ctx.respond(ii)
 
