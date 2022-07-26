@@ -29,9 +29,9 @@ if __name__ == '__main__':
     @lightbulb.command('fg-store', 'Gives current Fall Guys Shop Items')
     @lightbulb.implements(lightbulb.SlashCommand)
     async def fg-store(ctx):
-        #await ctx.respond('Current Items:')
-        for ii in getItems():
-            await ctx.respond(ii)
+        await ctx.respond('Current Items:')
+        #for ii in getItems():
+         #   await ctx.respond(ii)
 
     bot.run()
 
