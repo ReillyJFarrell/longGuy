@@ -1,6 +1,6 @@
 import hikari
 import requests
-import BeautifulSoup4
+from bs4 import BeautifulSoup
 import lightbulb
 
 
