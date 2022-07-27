@@ -73,7 +73,7 @@ def getItems(html):
     vals = html.split(" ")
     # print(vals)
     results = []
-    print(len(r.text))
+    # print(len(r.text))
     for ii in range(len(vals)):
         # print("loop")
         if 'alignnone' in vals[ii]:
