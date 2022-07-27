@@ -92,7 +92,7 @@ def getItems(html):
 if __name__ == '__main__':
 
     # items = getItems(scrape_store())
-    r = requests.get("https://www.fallshop.net/fall-guys-item-shop-today/")
+    r = requests.get("https://fallguys-db.pages.dev/store")
     print(r.text)
 
     bot = lightbulb.BotApp(token='MTAwMTI0MTE3MTY4MDU2NzQ0OA.GFurCp.jbufJUvJDP3BHkZ6fHp_dYV6dPZ3SdZn3lw5JY'
