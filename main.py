@@ -35,6 +35,7 @@ def scrape_store():
     #         print(e)
     time.sleep(2)
     val = browser.page_source
+    print(val)
     return val
     browser.quit()
 
@@ -101,9 +102,9 @@ if __name__ == '__main__':
     async def ping(ctx):
         print("Running Command")
         await ctx.respond('Current Items:')
-        for ii in items:
-            print(ii)
-            await ctx.respond(ii)
+        # for ii in items:
+        #     print(ii)
+        #     await ctx.respond(ii)
 
 
     bot.run()
