@@ -23,7 +23,7 @@ def scrape_store():
     browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
 
     wait = WebDriverWait(browser, 10)
-    browser.get('https://fallguysstore.com')
+    browser.get('https://www.fallshop.net/fall-guys-item-shop-today/')
     # element_list = wait.until(
     #     EC.presence_of_all_elements_located((By.CSS_SELECTOR, ".title > a"))
     # )
