@@ -101,7 +101,7 @@ if __name__ == '__main__':
     @lightbulb.command('fg-store', 'Gives current Fall Guys Shop Items')
     @lightbulb.implements(lightbulb.SlashCommand)
     async def ping(ctx):
-        await ctx.respond('Getting API Data and hosting on the cloud for free is impossible <:pepespit:851501242399195156> \n'
+        await ctx.respond('Getting Fall Guys API Data and hosting on the cloud for free is impossible <:pepespit:851501242399195156> \n'
                           'Try the fg-link command!')
         # print("Running Command")
         # await ctx.respond('Current Items:')
