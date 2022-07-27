@@ -23,7 +23,7 @@ def scrape_store():
     browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
 
     wait = WebDriverWait(browser, 10)
-    browser.get('https://www.fallshop.net/fall-guys-item-shop-today/')
+    browser.get('https://fallguys-db.pages.dev/store')
     # element_list = wait.until(
     #     EC.presence_of_all_elements_located((By.CSS_SELECTOR, ".title > a"))
     # )
@@ -92,8 +92,7 @@ def getItems(html):
 if __name__ == '__main__':
 
     # items = getItems(scrape_store())
-    r = requests.get("https://fallguys-db.pages.dev/store")
-    print(r.text)
+    scrape_store()
 
     bot = lightbulb.BotApp(token='MTAwMTI0MTE3MTY4MDU2NzQ0OA.GFurCp.jbufJUvJDP3BHkZ6fHp_dYV6dPZ3SdZn3lw5JY'
                            , default_enabled_guilds=(355444520378302464, 318564596321615892)
