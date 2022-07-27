@@ -91,7 +91,9 @@ def getItems(html):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
 
-    items = getItems(scrape_store())
+    # items = getItems(scrape_store())
+    r = requests.get("https://www.fallshop.net/fall-guys-item-shop-today/")
+    print(r.text)
 
     bot = lightbulb.BotApp(token='MTAwMTI0MTE3MTY4MDU2NzQ0OA.GFurCp.jbufJUvJDP3BHkZ6fHp_dYV6dPZ3SdZn3lw5JY'
                            , default_enabled_guilds=(355444520378302464, 318564596321615892)
