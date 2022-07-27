@@ -70,7 +70,7 @@ def getItems(html):
         # print('\n')
         # print(item)
         # items.append(item['src'])
-    vals = html.text.split(" ")
+    vals = html.split(" ")
     # print(vals)
     results = []
     print(len(r.text))
