@@ -1,5 +1,47 @@
 # This is a sample Python script.
 # import hikari
+
+
+
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import os
+import time
+
+
+
+def scrape_store():
+
+    browser = webdriver.Chrome(
+        executable_path="/Users/akjasim/chromedriver/chromedriver")
+
+    wait = WebDriverWait(browser, 10)
+    browser.get('https://fallguysstore.com')
+    # element_list = wait.until(
+    #     EC.presence_of_all_elements_located((By.CSS_SELECTOR, ".title > a"))
+    # )
+    # for element in element_list:
+    #     try:
+    #         title, url = element.text, element.get_attribute('href')
+    #         print("Title:", title, "\nURL:", url, end="\n\n")
+    #     except Exception as e:
+    #         print(e)
+    time.sleep(2)
+    val = browser.page_source
+    return val
+    browser.quit()
+
+
+
+
+
+
+
+
+
 import requests
 # from bs4 import BeautifulSoup
 import lightbulb
@@ -11,8 +53,8 @@ def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
 
-def getItems():
-    r = requests.get("https://fallguysstore.com")
+def getItems(html):
+    # r = requests.get("https://fallguysstore.com")
 
     # soup = BeautifulSoup(r.content)
     # items = []
@@ -24,7 +66,7 @@ def getItems():
         # print('\n')
         # print(item)
         # items.append(item['src'])
-    vals = r.text.split(" ")
+    vals = html.text.split(" ")
     # print(vals)
     results = []
     print(len(r.text))
@@ -44,6 +86,8 @@ def getItems():
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
 
+    items = getItems(scrape_store())
+
     bot = lightbulb.BotApp(token='MTAwMTI0MTE3MTY4MDU2NzQ0OA.GFurCp.jbufJUvJDP3BHkZ6fHp_dYV6dPZ3SdZn3lw5JY'
                            , default_enabled_guilds=(355444520378302464, 318564596321615892)
                            )
@@ -53,9 +97,10 @@ if __name__ == '__main__':
     async def ping(ctx):
         print("Running Command")
         await ctx.respond('Current Items:')
-        for ii in getItems():
+        for ii in items:
             print(ii)
             await ctx.respond(ii)
+            
 
     bot.run()
 

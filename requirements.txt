@@ -1,3 +1,4 @@
 requests
 git+https://github.com/tandemdude/hikari-lightbulb.git
-
+selenium==3.141.0
+ 
