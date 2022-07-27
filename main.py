@@ -92,7 +92,7 @@ def getItems(html):
 if __name__ == '__main__':
 
     # items = getItems(scrape_store())
-    scrape_store()
+    # scrape_store()
 
     bot = lightbulb.BotApp(token='MTAwMTI0MTE3MTY4MDU2NzQ0OA.GFurCp.jbufJUvJDP3BHkZ6fHp_dYV6dPZ3SdZn3lw5JY'
                            , default_enabled_guilds=(355444520378302464, 318564596321615892)
@@ -101,11 +101,20 @@ if __name__ == '__main__':
     @lightbulb.command('fg-store', 'Gives current Fall Guys Shop Items')
     @lightbulb.implements(lightbulb.SlashCommand)
     async def ping(ctx):
-        print("Running Command")
-        await ctx.respond('Current Items:')
+        await ctx.respond('Getting API Data and hosting on the cloud for free is :pepespit: \n'
+                          'Try the fg-link command!')
+        # print("Running Command")
+        # await ctx.respond('Current Items:')
         # for ii in items:
         #     print(ii)
         #     await ctx.respond(ii)
+
+
+    @bot.command
+    @lightbulb.command('fg-link', 'Gives link to Fall Guys Shop Items')
+    @lightbulb.implements(lightbulb.SlashCommand)
+    async def ping(ctx):
+        await ctx.respond('https://www.fallshop.net/fall-guys-item-shop-today/')
 
 
     bot.run()
