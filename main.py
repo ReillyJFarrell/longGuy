@@ -1,4 +1,4 @@
-# This is a sample Python script.
+#hikari does not support scraping, if hosting locally then scraping will work.
 # import hikari
 
 
