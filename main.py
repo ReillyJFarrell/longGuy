@@ -73,8 +73,8 @@ if __name__ == '__main__':
     # items = getItems(scrape_store())
     # scrape_store()
 
-    bot = lightbulb.BotApp(token='MTAwMTI0MTE3MTY4MDU2NzQ0OA.GFurCp.jbufJUvJDP3BHkZ6fHp_dYV6dPZ3SdZn3lw5JY'
-                           , default_enabled_guilds=(355444520378302464, 318564596321615892)
+    bot = lightbulb.BotApp(token='REDACTED'
+                           , default_enabled_guilds=(REDACTED, REDACTED)
                            )
     @bot.command
     @lightbulb.command('fg-store', 'Gives current Fall Guys Shop Items')
